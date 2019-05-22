@@ -11,7 +11,8 @@ class App extends Component {
     valueS: 50,
     SMessage: '',
     valueL: 50,
-    LMessage: ''
+    LMessage: '',
+    backgroundColor: ''
   }
 
   changeH = event => {
@@ -22,6 +23,7 @@ class App extends Component {
       HMessage: event.target.value
     })
     console.log(this.state.valueH)
+    // updateBackgroundColor()
   }
 
   changeS = event => {
@@ -30,6 +32,7 @@ class App extends Component {
     this.setState({
       valueS: event.target.value,
       SMessage: event.target.value
+      // backgroundColor: `hsl(${event.target.value}, 50%, 50%)`
     })
     console.log(this.state.valueS)
   }
@@ -44,9 +47,14 @@ class App extends Component {
     console.log(this.state.valueL)
   }
 
+  getBackgroundColorCss = () => {
+    return `hsl(${this.state.valueH}, ${this.state.valueS}%, ${
+      this.state.valueL
+    }%)`
+  }
   render() {
     return (
-      <main>
+      <main style={{ backgroundColor: this.getBackgroundColorCss() }}>
         <HelloWorld />
         This will be the output element that changes color
         <p>This will be the text of the current color value </p>
