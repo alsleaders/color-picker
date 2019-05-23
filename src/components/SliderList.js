@@ -63,9 +63,8 @@ class SliderList extends Component {
     return (
       <div>
         <main style={{ backgroundColor: this.getBackgroundColorCss() }}>
-          This will be the output element that changes color
-          <p>This will be the text of the current color value </p>
-          <p>This will be the hue - the value of H is {this.state.valueH}</p>
+          <p>So many different colors! </p>
+          <p>This is the hue - the value of H is {this.state.valueH}</p>
           <input
             type="range"
             min="0"
@@ -75,9 +74,7 @@ class SliderList extends Component {
             id="HSlider"
             onChange={this.changeH}
           />
-          <p>
-            This will be the saturation - the value of S is {this.state.valueS}%
-          </p>
+          <p>This is the saturation - the value of S is {this.state.valueS}%</p>
           <input
             type="range"
             min="0"
@@ -87,9 +84,7 @@ class SliderList extends Component {
             id="SSlider"
             onChange={this.changeS}
           />
-          <p>
-            This will be the lightness - the value of L is {this.state.valueL}%
-          </p>
+          <p>This is the lightness - the value of L is {this.state.valueL}%</p>
           <input
             type="range"
             min="0"
@@ -100,8 +95,7 @@ class SliderList extends Component {
             onChange={this.changeL}
           />
           <p>
-            This will be the transparency - the value of A is{' '}
-            {this.state.valueA}%
+            This is the transparency - the value of A is {this.state.valueA}%
           </p>
           <input
             type="range"
